@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "e47bb031-06ba-4414-b550-c9312edc4e56",
+		"name": "Zanesljivost in testiranje IS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24582326"
+	},
+	"item": [
+		{
+			"name": "register Copy",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "anze",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "anzetest.kozole@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "repPassword",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:5000/register/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "anze",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:5000/register/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:5000/register/logout/65265e8f27869eb18ccfa014"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/register/deleteUser/65265e8f27869eb18ccfa014"
+					},
+					"response": []
+				},
+				{
+					"name": "register/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/register/getAll"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservationDog Copy",
+			"item": [
+				{
+					"name": "Get All Dogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/reserveDog/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Reserve Dog",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:5000/reserveDog/updateOwner/1/2"
+					},
+					"response": []
+				},
+				{
+					"name": "reservation/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8080/reservation/delete/17"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservationDate Copy",
+			"item": [
+				{
+					"name": "Get All Visit Reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/reservationDate/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Visit Reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "dateOfVisit",
+									"value": "1.01.2024",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "nameOfVisitor",
+									"value": "anze",
+									"type": "text"
+								},
+								{
+									"key": "reserverId",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:5000/reservationDate/addReservation"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Visit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:5000/reservationDate/updateReservation/2/2.01.2024"
+					},
+					"response": []
+				},
+				{
+					"name": "reservationDate/delete/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": "http://localhost:8000/reservationDate/delete/11"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
